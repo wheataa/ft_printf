@@ -6,7 +6,7 @@
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 12:54:27 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 16:02:12 by jwheatin         ###   ########.fr       */
+/*   Updated: 2025/12/10 16:34:34 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ int		ft_printf_uns(va_list *ap);
 int		ft_printf_hexl(va_list *ap);
 int		ft_printf_hexu(va_list *ap);
 int		ft_printf_perc(void);
-char	*ft_itoa(long int n);
 
 #endif
