@@ -6,7 +6,7 @@
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 14:48:04 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 15:54:54 by jwheatin         ###   ########.fr       */
+/*   Updated: 2025/12/10 16:04:23 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_printf_hexl(va_list *ap)
 
 	length = 0;
 	n = va_arg(*ap, unsigned int);
-	length = ft_putnbr_base(n, "0123456789abcdef", &length);	
+	length = ft_putnbr_base(n, "0123456789abcdef", &length);
 	return (length);
 }
 
@@ -42,13 +42,13 @@ int	ft_printf_hexu(va_list *ap)
 
 	length = 0;
 	n = va_arg(*ap, unsigned int);
-	length = ft_putnbr_base(n, "0123456789ABCDEF", &length);	
+	length = ft_putnbr_base(n, "0123456789ABCDEF", &length);
 	return (length);
 }
 
 int	ft_printf_ptr(va_list *ap)
 {
-	size_t	n;
+	size_t			n;
 	unsigned int	length;
 
 	length = 2;

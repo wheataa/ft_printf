@@ -1,18 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_perc.c                                   :+:      :+:    :+:   */
+/*   ft_printf_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 13:04:47 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 15:34:09 by jwheatin         ###   ########.fr       */
+/*   Created: 2025/12/10 12:07:23 by jwheatin          #+#    #+#             */
+/*   Updated: 2025/12/10 16:30:28 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_perc()
+int	ft_printf_char(va_list *ap)
+{
+	int	c;
+
+	c = va_arg(*ap, int);
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_printf_str(va_list *ap)
+{
+	int		length;
+	char	*s;
+
+	s = va_arg(*ap, char *);
+	length = 0;
+	while (*s)
+	{
+		write (1, s, 1);
+		length++;
+		s++;
+	}
+	return (length);
+}
+
+int	ft_printf_perc(void)
 {
 	write(1, "%", 1);
 	return (1);
