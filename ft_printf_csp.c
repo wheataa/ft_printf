@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_printf_csp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 12:07:23 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 16:30:28 by jwheatin         ###   ########.fr       */
+/*   Updated: 2025/12/10 16:57:47 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,15 @@ int	ft_printf_str(va_list *ap)
 
 	s = va_arg(*ap, char *);
 	length = 0;
-	while (*s)
+	if (!s)
 	{
-		write (1, s, 1);
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (s[length])
+	{
+		write (1, &s[length], 1);
 		length++;
-		s++;
 	}
 	return (length);
 }
