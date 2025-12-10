@@ -6,7 +6,7 @@
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 12:16:59 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 15:34:23 by jwheatin         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:51:13 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_select_format(va_list *ap, const char *str)
 		length = ft_printf_char(ap);
 	else if (*str == 's')
 		length = ft_printf_str(ap);
-	/*else if (*str == 'p')
-		length = ft_printf_ptr(ap, str);i*/
+	else if (*str == 'p')
+		length = ft_printf_ptr(ap);
 	else if (*str == 'd' || *str == 'i')
 		length = ft_printf_int(ap);
 	else if (*str == 'u')

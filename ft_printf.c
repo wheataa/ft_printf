@@ -6,7 +6,7 @@
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 10:54:13 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 15:35:24 by jwheatin         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:56:57 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,10 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	int length = ft_printf("bello %s %c %% %x %X \n", "borld", 'c', 1066, 213454545, 2048);
-	int length2 = printf("bello %s %c %% %i %x %X \n", "borld", 'c', 1066, 213454545, 2048);
+	char	c = 'a';
+
+	int length = ft_printf("bello %s %c %% %i %x %X %p \n", "borld", c, 1066, 213454545, 20484, &c);
+	int length2 = printf("bello %s %c %% %i %x %X %p \n", "borld", c, 1066, 213454545, 20484, &c);
 	printf("%i\n", length);
 	printf("%i\n", length2);
 	return (0);
