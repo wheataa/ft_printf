@@ -6,7 +6,7 @@
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 14:48:04 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 16:59:51 by jwheatin         ###   ########.fr       */
+/*   Updated: 2025/12/11 09:43:33 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ int	ft_printf_ptr(va_list *ap)
 	unsigned int	length;
 
 	n = va_arg(*ap, size_t);
+	if (!n)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
 	length = 2;
 	write(1, "0x", 2);
 	length = ft_putnbr_base(n, "0123456789abcdef", &length);

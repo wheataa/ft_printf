@@ -6,7 +6,7 @@
 /*   By: jwheatin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 10:54:13 by jwheatin          #+#    #+#             */
-/*   Updated: 2025/12/10 16:59:05 by jwheatin         ###   ########.fr       */
+/*   Updated: 2025/12/11 09:44:02 by jwheatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ int	main(void)
 {
 	char	c = 'a';
 
-	int length = ft_printf("bello %s %c %% %i %x %X %p \n", NULL, c, 1066, 213454545, 20484, 0);
-	int length2 = printf("bello %s %c %% %i %x %X %p \n", NULL, c, 1066, 213454545, 20484, 0);
+	int length = ft_printf("bello %s %c %% %i %x %X %p %p\n", NULL, c, 1066, 213454545, 20484, 0, 0);
+	int length2 = printf("bello %s %c %% %i %x %X %p %p\n", NULL, c, 1066, 213454545, 20484, 0, 0);
 	printf("%i\n", length);
 	printf("%i\n", length2);
 	return (0);
